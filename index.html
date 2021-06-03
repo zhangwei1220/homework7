@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container :nth-child(n){
+            height:60px;
+            text-align: center;
+            line-height:60px;
+            color:white;
+        }
+        .container :nth-child(1){
+            background:lightsalmon;
+        }
+        .container :nth-child(2){
+            background:rgb(243, 228, 166);
+        }
+        .container :nth-child(3){
+            background:darksalmon;
+        }
+        .container :nth-child(4){
+            background:indianred;
+        }
+        @media screen and (max-width:768px){
+            .container :nth-child(n){
+                width:100%;
+                margin:0 auto;
+            }
+        }
+        @media screen and (min-width:1200px){
+            .container{
+                margin:0 auto;
+                display:flex;
+                justify-content: row;
+            }
+            .container :nth-child(n){
+                width:300px;
+            }
+
+        }
+        @media screen and (max-width:1200px) and (min-width:992px){
+            .container{
+                width:1200px;
+                display:flex;
+                justify-content: row;
+                flex-wrap: wrap;
+            }
+            .container :nth-child(n){
+                width:330px;
+            }
+            .container :nth-child(1){
+                width:990px;
+            }
+        }
+        @media screen and (max-width:992px) and (min-width:768px){
+            .container{
+                display:flex;
+                justify-content: row;
+                flex-wrap: wrap;
+            }
+            .container :nth-child(n){
+                width:384px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="con">1</div>
+        <div class="con">2</div>
+        <div class="con">3</div>
+        <div class="con">4</div>
+    </div>
+</body>
+</html>
